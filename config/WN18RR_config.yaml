@@ -1,0 +1,19 @@
+- case:
+    train:
+      dataset: [WN18RR]
+      batch_size: [100]
+      double_neg: [True]
+      optimizer: [Adam]
+      learning_rate: [0.00015]
+      neg_sample_size: [300]
+    model:
+      modelname: [AffE]
+      init_size: [0.001]
+      rank: [600]
+      sca: [0.5]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.0]
+      weight2: [1.0e-05]
+    test: [20]
+

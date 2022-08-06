@@ -1,0 +1,25 @@
+- case:
+    train:
+      dataset: [FB237]
+      batch_size: [500]
+      optimizer: [Adagrad]
+      learning_rate: [0.015]
+      neg_sample_size: [200]
+      max_epochs: [300]
+    model:
+      modelname: [AffE]
+      init_size: [0.001]
+      rank: [600]
+      bn_type: [None]
+      regmul: [0.8]
+      sca: [0.5]
+    load:
+      use_pre_model: [True]
+      pre_model: [./logs/04_30/FB237/AffE_08_23_00]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.00]
+      weight2: [0.0]
+    test: [3309]
+
+

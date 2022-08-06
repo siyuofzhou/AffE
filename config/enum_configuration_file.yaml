@@ -1,0 +1,237 @@
+- case:
+    train:
+      dataset: [FB237]
+      batch_size: [500]
+      optimizer: [Adagrad]
+      learning_rate: [0.015]
+      neg_sample_size: [200]
+    model:
+      modelname: [SRLE]
+      init_size: [0.001]
+      rank: [600]
+      sca: [0.25, 0.5, 0.75, 1.0, 2.0, 3.0, 10.0]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.00]
+      weight2: [0.00]
+    test: [3309]
+
+
+- case:
+    train:
+      dataset: [WN18RR]
+      batch_size: [100]
+      double_neg: [True]
+      debug: [False]
+      optimizer: [Adam]
+      learning_rate: [0.00015]
+      neg_sample_size: [300]
+      max_epochs: [400]
+    model:
+      modelname: [SRLE_sca, SRLE_base, SRLE_linear]
+      init_size: [0.001]
+      rank: [600]
+      hier_weight: [0.11]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.0]
+      weight2: [0.01]
+    test: [3309]
+
+
+- case:
+    train:
+      dataset: [FB237]
+      batch_size: [500]
+      optimizer: [Adagrad]
+      learning_rate: [0.015]
+      neg_sample_size: [200]
+    model:
+      modelname: [SRLE]
+      init_size: [0.001]
+      rank: [40]
+      sca: [3.0, 1.0, 10.0]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.00]
+      weight2: [0.00]
+    test: [3309]
+
+
+- case:
+    train:
+      dataset: [YAGO3-10]
+      batch_size: [2000]
+      optimizer: [Adam]
+      learning_rate: [0.0003]
+      neg_sample_size: [-1]
+      max_epochs: [400]
+      sca: [1.0]
+    model:
+      modelname: [AffE]
+      init_size: [0.001]
+      rank: [600]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.0]
+      weight2: [0.01]
+    test: [3309]
+
+
+
+- case:
+    train:
+      dataset: [FB237]
+      batch_size: [500]
+      optimizer: [Adagrad]
+      learning_rate: [0.02]
+      neg_sample_size: [100]
+    model:
+      modelname: [SRLE_sca]
+      init_size: [0.001]
+      rank: [40]
+      sca: [0.0, 0.5, 1.0, 1.5, 2.0, 3.0]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.00]
+      weight2: [0.00]
+    test: [3309]
+
+
+- case:
+    train:
+      dataset: [FB237]
+      batch_size: [500]
+      optimizer: [Adagrad]
+      learning_rate: [0.02]
+      neg_sample_size: [100]
+    model:
+      modelname: [SRLE_linear]
+      init_size: [0.001]
+      rank: [40]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.00]
+      weight2: [0.00, 0.001, 0.01, 0.1, 1.0]
+    test: [3309]
+
+
+
+
+
+- case:
+    train:
+      dataset: [WN18RR]
+      batch_size: [100]
+      double_neg: [True]
+      debug: [False]
+      optimizer: [Adam]
+      learning_rate: [0.00015]
+      neg_sample_size: [100]
+      max_epochs: [400]
+    model:
+      modelname: [STLE_sca]
+      init_size: [0.001]
+      rank: [40]
+      sca: [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.0]
+      weight2: [0.01]
+    test: [3309]
+
+- case:
+    train:
+      dataset: [WN18RR]
+      batch_size: [100]
+      double_neg: [True]
+      debug: [False]
+      optimizer: [Adam]
+      learning_rate: [0.00015]
+      neg_sample_size: [100]
+      max_epochs: [400]
+    model:
+      modelname: [SRLE_sca]
+      init_size: [0.001]
+      rank: [40]
+      sca: [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.0]
+      weight2: [0.01]
+    test: [3309]
+
+
+
+
+
+- case:
+    train:
+      dataset: [FB237]
+      batch_size: [500]
+      optimizer: [Adagrad]
+      learning_rate: [0.02]
+      neg_sample_size: [100]
+    model:
+      modelname: [SRLE_sca]
+      init_size: [0.001]
+      rank: [40]
+      sca: [0.0, 0.5,1.0, 5.0, 10.0, 15.0,30.0]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.00]
+      weight2: [0.00]
+    test: [3309]
+
+
+
+
+- case:
+    train:
+      dataset: [WN18RR]
+      batch_size: [100]
+      double_neg: [True]
+      debug: [False]
+      optimizer: [Adam]
+      learning_rate: [0.00015]
+      neg_sample_size: [300]
+      max_epochs: [400]
+    model:
+      modelname: [STLE, STLE_base, STLE_sca, STLE_linear]
+      init_size: [0.001]
+      rank: [600]
+      hier_weight: [0.11]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.0]
+      weight2: [0.01]
+    test: [3309]
+
+- case:
+    train:
+      dataset: [FB237]
+      batch_size: [500]
+      optimizer: [Adagrad]
+      learning_rate: [0.02]
+      neg_sample_size: [200]
+    model:
+      modelname: [STLE_linear, STLE, STLE_base, STLE_sca]
+      init_size: [0.001]
+      rank: [600]
+      sca: [0.5]
+    regularizer:
+      reg_name: [N3_N3]
+      weight: [0.00]
+      weight2: [0.00]
+    test: [3309]
+
+
+
+
+
+
+
+
+
+
+

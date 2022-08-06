@@ -1,0 +1,45 @@
+config_id: -1
+train:
+  dataset: FB237
+  debug: False
+  optimizer: Adagrad
+  learning_rate: 0.05
+  batch_size: 500
+  neg_sample_size: 100
+  double_neg: False
+  max_epochs: 350
+  valid: 5
+  vail_start_epoch: 0
+  patience: 12
+
+regularizer:
+  reg_name: N3
+  weight: 0.0
+  weight2: 0.0
+
+
+rel_agg:
+  use: False
+  topK: 5
+  alpha: 0.01
+
+load:
+  use_pre_model: False
+  pre_model: RotE_FB237_500
+  key_reg: (entity|rel|bh|bt).weight
+test: 5
+model:
+  modelname: RotE_add
+  sim: dot
+  rank: 500
+  d: 4
+  dropout: 0
+  gamma: 0
+  dtype: single
+  bias: learn
+  init_size: 0.001
+  sigma: 0.01
+  sca: 0.5
+  hier_weight: 0.1
+
+

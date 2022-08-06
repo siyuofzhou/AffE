@@ -1,0 +1,35 @@
+config_id: -1
+train:
+  dataset: WN18RR
+  debug: False
+  optimizer: Adam
+  learning_rate: 0.001
+  batch_size: 500
+  neg_sample_size: 250
+  double_neg: False
+  max_epochs: 100
+  valid: 5
+  vail_start_epoch: 0
+  patience: 10
+
+regularizer:
+  reg_name: N3
+  weight: 0.1
+
+load:
+  use_pre_model: False
+  pre_model: RotatE_WN18RR_1000
+  key_reg: (entity|rel|bh|bt).weight
+test: None
+model:
+  modelname: RotatE
+  sim: dot
+  rank: 1000
+  d: 4
+  dropout: 0
+  gamma: 0.0
+  dtype: single
+  bias: none
+  init_size: 0.001
+
+
